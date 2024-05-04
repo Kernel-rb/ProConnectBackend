@@ -1,12 +1,19 @@
 {
-  "name": "proconnectbackend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "proconnect-backend-api",
+  "version": "0.0.1",
+  "description": "Contact management app",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kernel-rb/ProConnectBackend.git"
+  },
+  "author": "kernel.rb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kernel-rb/ProConnectBackend/issues"
+  },
+  "homepage": "https://github.com/Kernel-rb/ProConnectBackend#readme"
 }
