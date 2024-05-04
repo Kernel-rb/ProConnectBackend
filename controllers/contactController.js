@@ -2,14 +2,23 @@
 //=== api/contacts/ ===
 //=== Public ===
 const getContact = async (req, res) => {
-    res.status(200).send({ message: 'All Contacts ' });
+    try {
+       
+    } catch (error) {
+        throw new Error(error);
+    }
 };
 
 // === Get Single Contact ===
 // === api/contacts/:id ===
 // === Public ===
 const getSingleContact = async (req, res) => {
-    res.status(200).send({ message: `Contact with id ${req.params.id}` });
+    try {
+        res.status(200).send({ message: `Contact with id ${req.params.id}` });
+    } catch (error) {
+        throw new Error(error);
+    }
+    
 };
 
 
@@ -26,11 +35,16 @@ const getSingleContact = async (req, res) => {
 // === api/contacts/new-user ===
 // === Private ===
 const createContact = async (req, res) => {
-    console.log("the body request : ", req.body);
-    const { name, email, phone } = req.body;
-    if (!name || !email || !phone) {
-        res.status(400);
-        throw new Error("Please fill all the fields");
+    try {
+        
+        console.log("the body request : ", req.body);
+        const { name, email, phone } = req.body;
+        if (!name || !email || !phone) {
+            res.status(400);
+            throw new Error("Please fill all the fields");
+        }
+    } catch (error) {
+        throw new Error(error);
     }
 
 
@@ -61,14 +75,22 @@ const createContact = async (req, res) => {
 // === api/contacts/update/:id ===
 // === Private ===
 const updateContact = async (req, res) => {
-    res.status(200).send({ message: `Update contact with id ${req.params.id}` });
+   try {
+        res.status(200).send({ message: `Update contact with id ${req.params.id}` });
+   } catch (error) {
+         throw new Error(error);
+    }
 };
 
 // === Delete a Contact ===
 // === api/contacts/delete/:id ===
 // === Private ===
 const deleteContact = async (req, res) => {
-    res.status(200).send({ message: `Delete contact with id ${req.params.id}` });
+    try {
+        res.status(200).send({ message: `Delete contact with id ${req.params.id}` });
+    } catch (error) {
+        throw new Error(error);
+    }
 };
 
 module.exports = {
